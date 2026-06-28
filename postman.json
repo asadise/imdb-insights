@@ -1,0 +1,177 @@
+{
+  "info": {
+    "name": "IMDb Insights API",
+    "_postman_id": "imdb-insights-api",
+    "description": "Postman collection for imdb-insights",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Titles",
+      "item": [
+        {
+          "name": "Same Director Writer",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/titles/same-director-writer?page=0&size=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                "same-director-writer"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Best Per Year",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/titles/best-per-year?genre=Drama&page=0&size=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "titles",
+                "best-per-year"
+              ],
+              "query": [
+                {
+                  "key": "genre",
+                  "value": "Drama"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Principals",
+      "item": [
+        {
+          "name": "Common Movies",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/principals/common-movies?actor1=nm0024876&actor2=nm0005717&page=0&size=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "principals",
+                "common-movies"
+              ],
+              "query": [
+                {
+                  "key": "actor1",
+                  "value": "nm0024876"
+                },
+                {
+                  "key": "actor2",
+                  "value": "nm0005717"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Co Actors",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/principals/co-actors?actor=nm0001908&page=0&size=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "principals",
+                "co-actors"
+              ],
+              "query": [
+                {
+                  "key": "actor",
+                  "value": "nm0001908"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Metrics",
+      "item": [
+        {
+          "name": "Request Count",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/metrics/request-count?page=0&size=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "metrics",
+                "request-count"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
